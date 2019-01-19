@@ -180,6 +180,7 @@ lib LibNCurses
   fun nonl : Result
   fun clear : Result
   fun erase : Result
+  fun doupdate : Result
 
   # Color
   fun start_color : Result
@@ -193,6 +194,7 @@ lib LibNCurses
   # Output
   fun werase(w : Window) : Result
   fun wrefresh(w : Window) : Result
+  fun wnoutrefresh(w : Window) : Result
   fun waddch(w : Window, ch : Chtype) : Result
   fun waddnstr(w : Window, s : Pointer(UInt8), n : LibC::Int) : Result
   fun whline(w : Window, ch : Chtype, n : LibC::Int) : Result

@@ -62,5 +62,9 @@ module NCurses
     def refresh
       check_error(LibNCurses.wrefresh(@win), "wrefresh")
     end
+
+    def noutrefresh
+      check_error(LibNCurses.wnoutrefresh(@win), "wnoutrefresh")
+    end
   end
 end
